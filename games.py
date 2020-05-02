@@ -1,5 +1,4 @@
 import pygame
-from pygame import gfxdraw
 
 pygame.init()
 wight_window = 1000
@@ -8,43 +7,48 @@ play_window = pygame.display.set_mode((wight_window, height_window))
 
 pygame.display.set_caption('Golems_Rush')
 
-walkRight = [pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_0.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_1.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_2.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_3.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_4.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_5.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_6.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_7.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_8.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_9.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_10.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_11.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_12.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_13.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_14.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_15.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_16.png'),
-             pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_17.png')]
-walkLeft = [pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_0.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_1.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_2.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_3.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_4.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_5.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_6.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_7.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_8.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_9.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_10.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_11.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_12.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_13.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_14.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_15.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_16.png'),
-            pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_17.png')]
-idle = pygame.image.load('R:\Projects_Python\Golems_Rush\copy_idle\Idle_0.png')
+
+def Golem_Gray():
+    walkRight = [pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_0.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_1.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_2.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_3.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_4.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_5.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_6.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_7.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_8.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_9.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_10.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_11.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_12.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_13.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_14.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_15.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_16.png'),
+                 pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkRight\Walking_Right_17.png')]
+    walkLeft = [pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_0.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_1.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_2.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_3.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_4.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_5.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_6.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_7.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_8.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_9.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_10.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_11.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_12.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_13.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_14.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_15.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_16.png'),
+                pygame.image.load('R:\Projects_Python\Golems_Rush\copy_walkLeft\Walking_Left_17.png')]
+    idle = pygame.image.load('R:\Projects_Python\Golems_Rush\copy_idle\Idle_0.png')
+    return walkRight, walkLeft, idle
+
+
 bg = pygame.image.load('R:\Projects_Python\Golems_Rush\copy_Bg.jpg')
 bg_down = pygame.image.load('R:\Projects_Python\Golems_Rush\Bg_down.jpg')
 
@@ -66,6 +70,11 @@ animCount = 0
 
 def drawWindow():
     global animCount
+    count = 0
+
+    if count == 0:
+        walkRight, walkLeft, idle = Golem_Gray()
+        count += 1
 
     play_window.blit(bg, (0, 0))
     play_window.blit(bg_down, (0, height_window - 83))
@@ -88,7 +97,7 @@ def drawWindow():
 
 run = True
 while run:
-    clock.tick(119)
+    clock.tick(200)
 
     for i in pygame.event.get():
         if i.type == pygame.QUIT:
@@ -107,7 +116,7 @@ while run:
         left = False
         right = False
         animCount = 0
-        
+
     if not isJump:
         if keys[pygame.K_SPACE]:
             isJump = True
