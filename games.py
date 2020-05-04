@@ -111,7 +111,7 @@ while run:
         animCount = 0
 
     if not isJump:
-        if keys[pygame.K_SPACE]:
+        if keys[pygame.K_UP]:
             soundJump.play()
             isJump = True
     else:

@@ -24,8 +24,9 @@ button_1 = tk.Button(main_form, text='НАЧАТЬ ИГРУ')
 button_2 = tk.Button(main_form, text='ЗАГРУЗИТЬ ИГРУ')
 button_3 = tk.Button(main_form, text='ВЫХОД ИЗ ИГРЫ', command=main_form.quit)
 
-button_3.place(x=(w / 2) - 48, y=(h / 2) + 111)
-print(button_3.grid_size())
+button_1.place(x=(w / 2) - 48, y=(h / 2) + 50)
+button_2.place(x=(w / 2) - 49, y=(h / 2) + 78)
+button_3.place(x=(w / 2) - 48, y=(h / 2) + 112)
 
 walkRight = [pygame.image.load('sprites\Golem_Braun\walkRight\Walking_Right_00.png'),
              pygame.image.load('sprites\Golem_Braun\walkRight\Walking_Right_01.png'),
